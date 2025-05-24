@@ -1,44 +1,159 @@
+html {
+  scroll-behavior: smooth;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #FFF5EE;
+  background-color: #ececec;
   color: #333;
-  font-family: 'Arial', sans-serif;
   line-height: 1.6;
 }
 
-.content-wrapper {
-    width: 1000px;
-    height: 500px;
-    box-shadow: 4px 4px 30px rgba(0,0,0,0.2);
-    border-radius: 12px;
-    background: #222522;
-    overflow: hidden;
-    margin-left: 150px;
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 50px; 
-}
-
-
-span.lower-text{
+a {
   font-weight: bold;
 }
 
-p{
- color: white;
+.content_bgimage {
+  background-image: url("Images/better.webp");
+  background-size: cover; /* or 'contain' if you want it fully visible */
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px; /* create spacing top & bottom */
 }
+
+.content-wrapper {
+  width: 80%;
+  max-width: 1000px;
+  height: 500px;
+  box-shadow: 1px 1px 8px grey;
+  border-radius: 20px;
+  background: #ffffff;
+  background: linear-gradient(146deg, rgba(255, 255, 255, 1) 45%, rgba(245, 245, 245, 1) 100%);
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
 
 .text-wrapper-1 {
-    font-size: 20pt;
-    text-align: left;
+  font-size: 20pt;
+  text-align: left;
 }
 
+/* Remove the overly specific global styling */
 img {
-    width: 400px;
-    height: 400px;
-    object-fit: cover; 
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
+
+/* Add this for profile pic only */
+.profile-pic {
+  width: 75%;
+  max-width: 400px;
+  height: 300px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid #dfdfdf;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.content-wrapper-2 {
+  margin-left: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+p, h5 {
+  font-size: 17px;
+  font-weight: bold;
+  color: black;
+}
+
+.btn {  
+  background: white;
+  color: #6a0dad;
+  border: 2px solid #6a0dad;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 7px rgba(0,0,0,0.1);
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #8c6bcf;
+  transform: scale(1.04);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    /* Stack vertically */
+    height: auto;
+    /* Let height grow naturally */
+    padding: 20px;
+    text-align: center;
+  }
+
+  .text-wrapper-1 {
+    font-size: 18pt;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    /* Full width on small screens */
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
+.about-title{
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.about-title::after {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 3rem;
+  background: #7843e9;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.carousel-item img {
+  width: 100px;
+  height: 500px;
+  object-fit: cover; /* or "contain" depending on your goal */
+}
+
+.bootstrap-cards{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
 
